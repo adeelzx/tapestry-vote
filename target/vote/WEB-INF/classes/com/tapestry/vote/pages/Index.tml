@@ -1,0 +1,27 @@
+<html t:type="layout" title="vote Index"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<ul>
+	<t:loop source="items" value="item">
+	<li>
+		$(item.title)
+	</li>
+	</t:loop>
+	</ul>
+    <t:beaneditform object="newItem"></t:beaneditform>
+
+    <p>The current time is: <strong>${currentTime}</strong></p>
+
+       <p:sidebar>
+       
+        <p>
+            [
+            <t:pagelink page="Index">refresh page</t:pagelink>
+            ]
+        </p>
+    </p:sidebar>
+
+</html>
